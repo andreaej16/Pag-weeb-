@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>PAQUETERIA TITÁN</title>
+
+  <style>
+    /* Fondo general en verde claro muy suave */
+    body {
+      background-color: #25641c94; /* Rosa pastel */
+    }
+
+    /* Estilo base para secciones */
+    header, nav, article, aside, footer {
+      background-color: #25641c94; /* Fondo blanco limpio */
+      padding: 20px;
+      margin: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.1); /* Sombra ligera */
+    }
+
+    #logo {
+      float: right;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    /* Header y footer con degradado en tonos rojos */
+    header, footer {
+      flex: 1 100%;
+      color: #ffffff; /* Texto blanco para contraste */
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-size: 40px;
+      text-align: center;
+      font-style: italic;
+      background: linear-gradient(to right, #0b4706cc, #137a25); /* Degradado rojo a vino */
+    }
+
+    /* Menú lateral con rojo suave */
+    nav.menu-principal {
+      background:linear-gradient(to right,#137a25,#0b4706cc) ;
+      padding: 12px 0;
+      margin: 0 20px 20px 20px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow:  0px 2px 6px rgba(0,0,0,0.15);
+    }
+    nav.menu-principal a{
+      color:#ffffff ;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 18px;
+      padding:8px 12px ;
+      border-radius: 6px;
+      transition: background 0.3s ease;
+    }
+    nav.menu-principal a:hover{
+      background-color: rgba(255,255,255,0.5);
+    }
+
+    /* Aside en tono similar pero diferenciado */
+    aside {
+      flex: 1 20%;
+      background-color: #16740e; /* Rosa claro más marcado */
+    }
+
+    /* Área principal */
+    main {
+      flex: 1 60%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    article {
+      background-color: #5da746; /* verde muy claro */
+    }
+
+
+    .cintillo-imagenes{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap:20px;
+      padding: 5px;
+      margin: 0 20px 20px 20px;
+      background-color: #5da746;
+      border-radius: 30px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      flex-wrap: wrap;
+        }
+      .cintillo-imagenes img{
+      height: 250px;
+      object-fit: contain;
+      }
+
+      @keyframes desplazarCintillo {
+        0%{
+          transform: translateX(0%)
+        }
+        100%{
+          transform: translateX(-50%);
+        }
+
+
+      }
+      .cintillo-imagenes{
+        overflow: hidden;
+        position: relative;
+      }
+      .cintillo-imagenes::before
+      .cintillo-imagenes::after{
+        content:"" ;
+        position: absolute;
+        top: 0;
+        width: 10%;
+        height: 100%;
+        z-index: 1;
+      }
+      .cintillo-imagenes .slider{
+        display: flex;
+        animation: desplazarCintillo 20s linear infinite;
+      }
+
+      .cintillo-imagenes .slider img{
+        flex-shrink: 0;
+        height: 350px;
+        margin-right: 20px;
+      }
+      .cintillo-imagenes:hover .slider{
+      animation-play-state: paused;
+      }
+      .cintillo-imagenes:hover .slider img{
+        transition: transform 0.5s ease;
+      }  
+      .cintillo-imagenes .slider img:hover{
+        transform: scale(5.0);
+        z-index: 50;
+      }
+
+    /* Estilo de lista del menú */
+    nav ul li {
+      list-style: none;
+      margin: 10px 0;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #28c677; /* Rojo principal */
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      color: #073811; /* Vino al pasar el mouse */
+    }
+    footer{
+    background: linear-gradient(to right, #16b666, #04441d); /* Degradado rojo a vino */
+    color: #ffffff; /* Texto blanco para buen contraste */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+    text-align: center;
+    font-style: italic;
+    padding: 12px;
+    font-weight: normal;
+
+
+    }
+    footer a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 5px;
+    }
+    footer a:hover {
+    text-decoration: underline;
+    }
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <img id="logo" height="150px" width="150px" src="Titán.webp" alt="Imagen de ejemplo">
+    <h1>PAQUETERIA TITÁN</h1>
+    <p>Todas las soluciones para tu empresa en Desarrollo de Software</p>
+  </header>
+  <nav class="menu-principal">
+      <a href="#">Inicio</a></li>
+      <a href="#">Nosotros</a></li>
+      <a href="#">Mis Servicios</a></li>
+    </nav>
+
+  <div class="container"> 
+    <main>
+      <article>
+        <h2>Quienes Somos</h2>
+        <p>En Paquetería Titán somos una empresa mexicana especializada en el transporte y logística de paqueteria y mensajeria, con más de 10 años de experiencia
+         <p>Nuestro equipo está conformado por profesionales apasionados por la tecnología, comprometidos con la excelencia, la calidad y la mejora continua. Combinamos creatividad, análisis y experiencia para diseñar sistemas que se adapten a las necesidades específicas de cada cliente.</p>
+        <br>
+        <p>En paquetería titán, creemos en la logística como una herramienta estratégica para mejorar procesos, optimizar recursos y alcanzar objetivos. Más que proveedores, somos aliados que acompañan a nuestros clientes en cada etapa de su crecimiento.</p>
+      </article>
+
+      <article>
+        <h2>Conoce a nuestro equipo</h2>
+        <p>Somos un grupo de ingenieros y consultores apasionados por la logística. Trabajamos juntos para crear soluciones que realmente marcan la diferencia.</p>
+        <p>Nuestros valores son el trabajo en equipo, la responsabilidad, la innovación y la empatía con nuestros clientes.</p>
+      </article>
+    </main>
+
+    <aside>
+     <h2>Nuestros servicios</h2>
+        <p>En Paquetería titán desarrollamos rutas de entrega para empresas de todos los tamaños. Nuestros servicios incluyen:</p>
+        <ul>
+          <li>Desarrollo de rutas</li>
+          <li>Aplicaciones de monitoreo</li>
+          <li>Consultoría </li>
+          <li>Integración de sistemas</li>
+          <li>Soporte técnico y mantenimiento</li>
+        </ul>
+        <br>
+        <h2>Misión y visión</h2>
+<p><strong>Misión:</strong> Proveer soluciones logísticas innovadoras que impulsen el crecimiento y la eficiencia de nuestros clientes.</p>
+<p><strong>Visión:</strong> Ser una empresa líder en logística de transporte a nivel nacional, reconocida por su calidad, ética y compromiso con la innovación.</p>
+    </aside>
+  </div>
+
+  <div class="cintillo-imagenes">
+<div class="slider">
+
+ <img src="https://latin-america.internationalcamiones.com/-/media/Project/International-Trucks/International-Trucks/LatinAmerica/Mega-Menu/SERIE_LT_navigation.jpg?h=281&iar=0&w=531&rev=0f4f0fe863834f7192b738e57d7f7ead&hash=732CAAF9F879CEC9B838478FC854437F" alt="Logo 1">
+    <img src="https://www.interperu.pe/blog/wp-content/uploads/2017/10/interperu-tracto-camion-consejo-seguridad-carga-carretera.jpg" alt="Logo 4">
+    <img src="https://irp.cdn-website.com/b5131bd5/dms3rep/multi/Caracter%C3%ADsticas+de+los+tractocamiones+International+Serie+LT.webp" alt="Logo 4">
+    <img src="https://wp.tyt.com.mx/wp-content/uploads/2025/05/tractocamion-sobrecarga-1024x597.jpg" alt="Logo 4">
+    <img src="https://www.gob.mx/cms/uploads/article/main_image/108779/traileres.jpeg" alt="Logo 4">
+    <img src="https://blog.tps.com.mx/hs-fs/hubfs/blog%20tractos.jpg?width=10000&name=blog%20tractos.jpg" alt="Logo 4">
+
+
+
+
+</div>
+  
+   
+    
+
+
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+ <footer>
+  <p>&copy; PAQUETERÍA TITÁN SA DE CV. Todos los derechos reservados.</p>
+  
+  <p>Contacto: <a href="mailto:contactopaquetríatitán.com.mx">contacto@paqueteríaTitán.com.mx</a> | Tel: (52) 477 813 812</p>
+  
+  <div style="margin-top: 10px;">
+    <a href="#" style="color: white; margin: 0 10px;">Aviso de privacidad</a> |
+    <a href="#" style="color: white; margin: 0 10px;">Términos y condiciones</a> |
+    <a href="#" style="color: white; margin: 0 10px;">Política de cookies</a>
+  </div>
+  
+  <div style="margin-top: 10px;">
+    <a href="https://facebook.com" target="_blank" style="color: white; margin: 0 10px;">Facebook</a>
+    <a href="https://twitter.com" target="_blank" style="color: white; margin: 0 10px;">Twitter</a>
+    <a href="https://linkedin.com" target="_blank" style="color: white; margin: 0 10px;">LinkedIn</a>
+  </div>
+</footer>
+</body>
+</html>
